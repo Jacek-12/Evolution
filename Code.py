@@ -6,8 +6,6 @@ def start_anzeige():
     root = tk.Tk()
     root.title("Status")
 
-    print("Odin war hier")
-        
     
     root.configure(bg="white")
 
