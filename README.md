@@ -1,33 +1,30 @@
 # Evolution 
 
-Ein kleines Evolutions-Projekt mit Haien und Fischen – erstellt in TurboWarp/Scratch.
+A small evolution project featuring sharks and fish – created in TurboWarp/Scratch.
 
-## Öffnen des Projekts
+## Opening the project
 
-Dieses Projekt ist ausschließlich für [TurboWarp](https://turbowarp.org/) gedacht.
+This project is designed exclusively for [TurboWarp](https://turbowarp.org/).
 
-1. Lade die Datei mit der Endung `.sb3` herunter.
-2. Öffne anschließend [TurboWarp](https://turbowarp.org/).
-3. Gehen sie auf **Datei → Hochladen** und wählen sie die `.sb3`-Datei aus.
+1. Download the file with the `.sb3` extension.
+2. Then open [TurboWarp](https://turbowarp.org/).
+3. Go to **File → Upload** and select the `.sb3` file.
 
-## Verwendung
+## How to use
 
-- Klicke auf die **grüne Flagge**, um die Simulation zu starten.
-- Beobachte, welche Haie und Fische sich am besten anpassen und durchsetzen.
-- Mit der **Leertaste** kannst du die Simulation beenden.
+- Click on the **green flag** to start the simulation.
+- Observe which sharks and fish adapt best and prevail.
+- You can end the simulation using the **space bar**.
 
-## Was passiert im Projekt?
+## What happens in the project?
 
-Die Tiere entwickeln sich mit der Zeit evolutionär weiter.  
-Der aktuelle Fortschritt wird automatisch im Browser gespeichert, sodass die Entwicklung erhalten bleibt.
+The animals evolve over time.  
+Your current progress is automatically saved in the browser, so your progress is preserved.
 
-## Entwickler
+## Developers
 
-Entwickelt von:
-
+Developed by:
 - [Jacek-12](https://scratch.mit.edu/users/Jacek-12/)
 - [Felix-Balu](https://scratch.mit.edu/users/Felix-Balu/)
-
 ---
-
-Viel Spaß mit dem Projekt! 
+Enjoy the project!
