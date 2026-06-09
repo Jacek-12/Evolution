@@ -4,8 +4,7 @@ A small evolution project featuring sharks and fish – created in TurboWarp/Scr
 
 ## Opening the project
 
-This project is designed exclusively for [TurboWarp](https://turbowarp.org/).
-
+You can download the HTML file or open the `.sb3` file in [TurboWarp](https://turbowarp.org/):
 1. Download the file with the `.sb3` extension.
 2. Then open [TurboWarp](https://turbowarp.org/).
 3. Go to **File → Load from your computer** and select the `.sb3` file.
