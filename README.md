@@ -8,7 +8,7 @@ This project is designed exclusively for [TurboWarp](https://turbowarp.org/).
 
 1. Download the file with the `.sb3` extension.
 2. Then open [TurboWarp](https://turbowarp.org/).
-3. Go to **File → Upload** and select the `.sb3` file.
+3. Go to **File → Load from your computer** and select the `.sb3` file.
 
 ## How to use
 
