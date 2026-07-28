@@ -9,11 +9,13 @@ You can download the HTML file or open the `.sb3` file in [TurboWarp](https://tu
 2. Then open [TurboWarp](https://turbowarp.org/).
 3. Go to **File → Load from your computer** and select the `.sb3` file.
 
-## How to use
+## How to use in TurboWarp
 
 - Click on the **green flag** to start the simulation.
 - Observe which sharks and fish adapt best and prevail.
-- You can end the simulation using the **space bar**.
+- You can end the simulation using the **red button**.
+
+The HTML file starts when it is opened and ends when it is closed.
 
 ## What happens in the project?
 
