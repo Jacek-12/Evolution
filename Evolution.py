@@ -1,4 +1,3 @@
-from Individuum import Individuum
 import random
 import math
 
