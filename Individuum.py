@@ -1,7 +1,9 @@
+import random
+
 class Individuum:
   fitness: float = 0
 
-  def __init__(self, dna: list[float]):
+  def __init__(self, dna: list[float], eltern_id: str | None = None):
     if not isinstance(dna, list):
       raise TypeError("die übergebene DNA ist keine liste.")
 
@@ -16,6 +18,13 @@ class Individuum:
         raise ValueError("Die DNA enthält mindestens ein Element das größer als 50 oder kleiner als 0 ist.")
 
     self.dna = dna
+    self.eltern_id = eltern_id
+
+    id = ""
+    for i in range(20):
+      id = id + str(random.randint(0, 9))
+
+    self.id = id
 
   @property
   def dna(self):
