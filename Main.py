@@ -40,7 +40,10 @@ class Main:
       for Individuum in aktuelle_generation:
         gewichte.append(Individuum.fitness - schlechteste_fitness)
 
-      ueberlebende_individuen = random.choice(aktuelle_generation, gewichte, k=(self.groesse_generationen / 2))
+      ueberlebende_individuen: list[Individuum] = random.choice(aktuelle_generation, gewichte, k=(self.groesse_generationen / 2))
 
-    self.generationen.append(ueberlebende_individuen)
-    # Neue Individuen anhängen.
+    neu_generation = ueberlebende_individuen
+    for individuum in ueberlebende_individuen:
+      neu_generation.append(Individuum(self.erstelle_mutation(individuum.dna), individuum.id))
+
+    self.generationen.append(neu_generation)
