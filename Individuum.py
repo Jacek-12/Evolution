@@ -29,3 +29,7 @@ class Individuum:
   @property
   def dna(self):
     return self.dna
+
+  @property
+  def id(self):
+    return self.id
