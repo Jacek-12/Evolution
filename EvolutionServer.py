@@ -12,8 +12,8 @@ class EvolutionServer:
     self.erstelle_mutation = erstelle_mutation
     self.teste_fitness = teste_fitness
     self.groesse_generationen = groesse_generationen
-    self.generationen: list[list[Individuum]] = [[]]
 
+    self.generationen: list[list[Individuum]] = [[]]
     for i in range(self.groesse_generationen):
       self.generationen[0].append(Individuum(erstelle_dna()))
 
