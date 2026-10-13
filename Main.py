@@ -1,49 +1,54 @@
-from Individuum import Individuum
 import random
+import math
+import EvolutionServer
 
-class Main:
-  def __init__(self, erstelle_dna: function, erstelle_mutation: function, teste_fitness: function, groesse_generationen: int):
-    if groesse_generationen <= 0:
-      raise ValueError("Die größer der Generationen ist <= 0.")
+def erstelle_dna():
+  dna = []
+  for i in range(4):
+    dna.append(random.randint(0, 49) + random.random())
 
-    if groesse_generationen % 2 == 1:
-      raise ValueError("Die größer der Generation ist ungerade.")
+  return dna
 
-    self.erstelle_mutation = erstelle_mutation
-    self.teste_fitness = teste_fitness
-    self.groesse_generationen = groesse_generationen
-    self.generationen: list[list[Individuum]] = [[]]
+def erstelle_mutation(dna: list[float]):
+  neue_dna = []
+  n = 0
+  for i in dna:
+    u1 = random.random()
+    if u1 == 0:
+      u1 = 1
 
-    for i in range(self.groesse_generationen):
-      self.generationen[0].append(Individuum(erstelle_dna()))
+    u2 = random.random()
 
-  def erstelle_naechste_generation(self):
-    aktuelle_generation = self.generationen[len(self.generationen) - 1]
+    z = math.sqrt(-2 * math.log(u1)) * math.cos(2 * math.pi * u2)
 
-    for Individuum in aktuelle_generation:
-      Individuum.fitness = self.teste_fitness(Individuum.dna)
+    neue_dna.append(dna[n] + z)
 
-    schlechteste_fitness = aktuelle_generation[0].fitness
-    beste_fitness = aktuelle_generation[0].fitness
+    n += 1
 
-    for Individuum in aktuelle_generation:
-      if Individuum.fitness < schlechteste_fitness:
-        schlechteste_fitness = Individuum.fitness
+  for i in neue_dna:
+    if i < 0:
+      neue_dna[neue_dna.index(i)] = 0
 
-      if Individuum.fitness > beste_fitness:
-        beste_fitness = Individuum.fitness
+    if i > 50:
+      neue_dna[neue_dna.index(i)] = 50
 
-    if schlechteste_fitness == beste_fitness:
-      ueberlebende_individuen = random.choice(aktuelle_generation, k=(self.groesse_generationen / 2))
-    else:
-      gewichte = []
-      for Individuum in aktuelle_generation:
-        gewichte.append(Individuum.fitness - schlechteste_fitness)
+  return neue_dna
 
-      ueberlebende_individuen: list[Individuum] = random.choice(aktuelle_generation, gewichte, k=(self.groesse_generationen / 2))
+def teste_fitness(dna: list[float]):
+  durchschnitt = 0
+  for i in dna:
+    durchschnitt += i
+  durchschnitt = durchschnitt / len(dna)
 
-    neu_generation = ueberlebende_individuen
-    for individuum in ueberlebende_individuen:
-      neu_generation.append(Individuum(self.erstelle_mutation(individuum.dna), individuum.id))
+  for i in dna:
+    fitness = abs(durchschnitt - i) * -1
 
-    self.generationen.append(neu_generation)
+  return fitness
+
+groesse_generationen = 100
+
+
+
+runing = True
+while runing:
+  pass
