@@ -17,19 +17,23 @@ class Individuum:
       if i < 0 or i > 50:
         raise ValueError("Die DNA enthält mindestens ein Element das größer als 50 oder kleiner als 0 ist.")
 
-    self.dna = dna
-    self.eltern_id = eltern_id
+    self._dna = dna
+    self._eltern_id = eltern_id
 
     id = ""
     for i in range(20):
       id = id + str(random.randint(0, 9))
 
-    self.id = id
+    self._id = id
 
   @property
   def dna(self):
-    return self.dna
+    return self._dna
 
   @property
   def id(self):
-    return self.id
+    return self._id
+
+  @property
+  def eltern_id(self):
+    return self._eltern_id
