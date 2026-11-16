@@ -1,14 +1,14 @@
-import random
+import uuid
 
 class Individuum:
   fitness: float = 0
 
   def __init__(self, dna: list[float], eltern_id: str | None = None):
     if not isinstance(dna, list):
-      raise TypeError("die übergebene DNA ist keine liste.")
+      raise TypeError("Die übergebene DNA ist keine liste.")
 
-    if len(dna) > 4:
-      raise ValueError("Die DNA enthält mehr als 4 Elemente.")
+    if len(dna) != 4:
+      raise ValueError("Die DNA muss genau 4 Elemente enthalten.")
 
     for i in dna:
       if not isinstance(i, float):
@@ -20,11 +20,7 @@ class Individuum:
     self._dna = dna
     self._eltern_id = eltern_id
 
-    id = ""
-    for i in range(20):
-      id = id + str(random.randint(0, 9))
-
-    self._id = id
+    self._id = uuid.uuid4()
 
   @property
   def dna(self):
