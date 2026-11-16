@@ -1,7 +1,7 @@
 import uuid
 
 class Individuum:
-  fitness: float = 0
+  fitness: float = 0.0
 
   def __init__(self, dna: list[float], eltern_id: str | None = None):
     if not isinstance(dna, list):
