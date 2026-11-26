@@ -18,6 +18,8 @@ class VierGewinnt:
   spieler = Spieler.SPIELER_A
 
   def ziehe(self, spalte: int):
+    # Prüfen, ob das Spiel nicht schon vorbei ist.
+
     if spalte < 0 or spalte > 6:
       raise ValueError("Der Parameter spalte muss zwischen 0 und 6 sein.")
 
@@ -30,3 +32,5 @@ class VierGewinnt:
       self.spieler = Spieler.SPIELER_B
     else:
       self.spieler = Spieler.SPIELER_A
+
+  # Spielzustand Prüfen Gewinner, Unentschieden ...
