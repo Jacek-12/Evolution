@@ -29,9 +29,6 @@ class EvolutionService:
     for individuum in self.generationen[-1]:
       aktuelle_fitness.append(individuum.fitness)
 
-    if len(aktuelle_fitness) != self._groesse_generationen:
-      raise ValueError("Die Fitness hat nicht so viele Elemente, wie es Individuen gibt.")
-
     anzahl_fitness_groesser_null = 0
     for i in aktuelle_fitness:
       if not isinstance(i, float):
